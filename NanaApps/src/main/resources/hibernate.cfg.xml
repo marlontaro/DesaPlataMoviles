@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+        <property name="connection.url">jdbc:mysql://localhost:3306/nanaapps?zeroDateTimeBehavior=convertToNull</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">mysql</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.id.new_generator_mappings">false</property>
+        <property name="show_sql">true</property>
+
+        <property name="format_sql">true</property>
+        <!--property name="hbm2ddl.auto">create-drop</property-->
+
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">1</property>
+        <property name="current_session_context_class">thread</property>
+
+        <mapping class="pe.edu.upc.bean.Usuario" />
+        <mapping class="pe.edu.upc.bean.Solicitud" />
+        <mapping class="pe.edu.upc.bean.Empleado" />
+        <mapping class="pe.edu.upc.bean.Horario" />
+        <mapping class="pe.edu.upc.bean.Calificacion" />
+        <mapping class="pe.edu.upc.bean.OpcionMenu" />
+        <mapping class="pe.edu.upc.bean.OpcionMenuUsuario" />
+        <mapping class="pe.edu.upc.bean.Parametro" />
+        <mapping class="pe.edu.upc.bean.Persona" />
+
+
+    </session-factory>
+</hibernate-configuration>
